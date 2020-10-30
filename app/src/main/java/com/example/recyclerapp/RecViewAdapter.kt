@@ -25,10 +25,11 @@ class RecViewAdapter(private val db : BibDatabase) : RecyclerView.Adapter<RecVie
     }
 
     override fun getItemCount(): Int {
-        return db.size()
+        return Integer.MAX_VALUE
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        val position = (position) % 96
         val entry = db.getEntry(position) //Pos starts from 0
         val contTitle = entry.getField(Keys.TITLE)
         val contAuthor = entry.getField(Keys.AUTHOR)

@@ -25,6 +25,7 @@ class ExampleUnitTest {
     fun biblibTesting() {
         val database: BibDatabase = openDatabase("/mixed.bib") ?: throw(NullPointerException())
         val first = database.getEntry(1)
+        println(database.size())
         println(first.type)
         println(first.getField(Keys.AUTHOR))
     }
