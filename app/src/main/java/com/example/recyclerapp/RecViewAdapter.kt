@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import name.ank.lab4.BibDatabase
 import name.ank.lab4.Keys
 import name.ank.lab4.Types
+import kotlinx.android.synthetic.main.listitem.*
+import kotlinx.android.synthetic.main.listitem.view.*
 
 class RecViewAdapter(private val db : BibDatabase) : RecyclerView.Adapter<RecViewAdapter.MyViewHolder>() {
 
@@ -17,10 +19,10 @@ class RecViewAdapter(private val db : BibDatabase) : RecyclerView.Adapter<RecVie
     }
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-            var title: TextView = itemView.findViewById(R.id.title)
-            var author: TextView = itemView.findViewById(R.id.author)
-            var etc: TextView = itemView.findViewById(R.id.etc)
-            var type: TextView = itemView.findViewById(R.id.type)
+            var title: TextView = itemView.title
+            var author: TextView = itemView.author
+            var etc: TextView = itemView.etc
+            var type: TextView = itemView.type
 
     }
 
